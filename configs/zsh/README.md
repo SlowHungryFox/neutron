@@ -4,14 +4,18 @@
 
 ### .zshrc
 
+Append this to your `~/.zshrc`
 ```bash
-
+export ZSH_BASE_CONFIG="$HOME/workplace/neutron/configs/zsh"
+source "$ZSH_BASE_CONFIG/.base.zshrc"
 ```
 
 ### .zshenv
 
+Append this to your `~/.zshenv`
 ```bash
-
+export ZSH_BASE_CONFIG="$HOME/workplace/neutron/configs/zsh"
+[[ ! -f "${ZSH_BASE_CONFIG}/.base.zshenv" ]] || source "${ZSH_BASE_CONFIG}/.base.zshenv"
 ```
 
 ## Troubleshooting
